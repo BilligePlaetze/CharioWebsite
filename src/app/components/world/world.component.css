@@ -16,3 +16,7 @@
     height: 80vh;
     background-color: rgba(60, 60, 60, 0.45);
 }
+
+agm-map {
+  height: 300px;
+}

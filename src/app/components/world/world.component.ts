@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./world.component.css']
 })
 export class WorldComponent {
-
   constructor() { }
   title = 'hallo2';
+  lng = 7.809007;
+  lat = 51.678418;
 }

@@ -19,6 +19,16 @@
     <div class="card large-card">
       <div class="card-content white-text">
         <span class="card-title">Card Title</span>
+        <h1>{{ title }}</h1>
+
+
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+
+
         <p>I am a very simple card. I am good at containing small bits of information.
         I am convenient because I require little markup to use effectively.</p>
       </div>
