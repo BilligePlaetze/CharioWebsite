@@ -1,0 +1,14 @@
+.background {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #03a9f4, #4caf50);
+}
+
+.large-nav {
+    height: 92px;
+    background-color: rgba(2, 119, 189, 0.2);
+}
+
+.large-card {
+    height: 84vh;
+    background-color: rgba(60, 60, 60, 0.45);
+}
