@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Response, Http } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/toPromise';
@@ -26,9 +26,12 @@ export class DataService {
       .map(res => res.json());
   }
 
-  updateTransaction(tr: transaction) {
-    return this.http.post(FEATURE_BASE_URL, transaction)
-      .map(res => res.json());
+  updateTransaction(tr: transaction): Observable<transaction> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(FEATURE_BASE_URL, tr, {
+      headers: headers
+    }).map((res: Response) => res.json());
   }
 
 }

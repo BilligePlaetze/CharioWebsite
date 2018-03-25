@@ -26,7 +26,7 @@ export class TrackingComponent implements OnInit {
   async ngOnInit() {
 
     while (1) {
-      this.dataService.getTransaction('CC180I').subscribe(
+      this.dataService.getTransaction('AGOATI').subscribe(
         penis => this.readTransactions(penis['_embedded']['transactions']),
         err => {
           console.log(err);
@@ -37,8 +37,8 @@ export class TrackingComponent implements OnInit {
   }
 
   private readTransactions(transactions: any) {
-    const agentA = transactions[0].transactionId.agentId === 'A' ? transactions[0] : transactions[1];
-    const agentB = transactions[0].transactionId.agentId === 'B' ? transactions[0] : transactions[1];
+    const agentA = transactions[0].transactionId.agentId === 'AgentA' ? transactions[0] : transactions[1];
+    const agentB = transactions[0].transactionId.agentId === 'AgentB' ? transactions[0] : transactions[1];
       console.log(agentA);
       console.log(agentB);
       if (agentA['photo']) {
