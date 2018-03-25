@@ -7,18 +7,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WorldComponent } from './components/world/world.component';
 import { CharityComponent } from './components/charity/charity.component';
+import { TrackingComponent } from './components/tracking/tracking.component';
 
 const appRoutes: Routes = [
   { path: 'charity', component: CharityComponent },
   { path: 'world',      component: WorldComponent },
-  { path: '',      component: WorldComponent }
+  { path: '',      component: WorldComponent },
+  { path: 'tracking', component: TrackingComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     WorldComponent,
-    CharityComponent
+    CharityComponent,
+    TrackingComponent
   ],
   imports: [
     RouterModule.forRoot(

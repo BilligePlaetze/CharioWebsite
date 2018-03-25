@@ -1,0 +1,18 @@
+.large-nav {
+  height: 72px;
+  background-color: rgba(2, 119, 189, 0.2);
+}
+
+.large-card-container {
+  position: absolute; top: 100px; bottom: 28px; left: 3vw; right: 3vw
+}
+
+.large-card {
+  height: 80vh;
+  background-color: rgba(60, 60, 60, 0.45);
+}
+
+agm-map {
+  height: 70vh;
+  width: 45vw;
+}

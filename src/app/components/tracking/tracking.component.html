@@ -1,0 +1,40 @@
+
+<nav class="large-nav">
+  <div class="nav-wrapper row">
+    <form>
+      <div class="col s1">
+        <p>Chario</p>
+      </div>
+      <div class="input-field col s11">
+        <input id="search" type="search" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
+
+<div class="row large-card-container">
+  <div class="col offset-s1 s10">
+    <div class="card large-card">
+      <div class="card-content white-text">
+        <span class="card-title">Track your donation</span>
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+        <div class="row">
+          <div class="col">
+            <agm-map [latitude]="niger_lat" [longitude]="niger_lng" [zoom]="3">
+              <agm-marker [latitude]="niger_lat" [longitude]="niger_lng" (markerClick)="clickedMarker('Niger', 0)">
+              </agm-marker>
+              <agm-marker [latitude]="zkm_lat" [longitude]="zkm_lng"></agm-marker>
+              <agm-marker [latitude]="goat_buyer_lat" [longitude]="goat_buyer_lng"></agm-marker>
+            </agm-map>
+          </div>
+          <div class="col">
+            <img width="300px" src="assets/1.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
