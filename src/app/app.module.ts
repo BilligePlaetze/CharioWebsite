@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { WorldComponent } from './components/world/world.component';
 import { CharityComponent } from './components/charity/charity.component';
 import { TrackingComponent } from './components/tracking/tracking.component';
+import { DataService } from './data.service';
+import {HttpModule} from '@angular/http';
 
 const appRoutes: Routes = [
   { path: 'charity', component: CharityComponent },
@@ -29,11 +31,12 @@ const appRoutes: Routes = [
       { enableTracing: true }),
     BrowserModule,
     MaterializeModule,
+    HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyC5sO9SQiJJe8wEAI41Q35vPmlrKtlCxfU'
     })
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

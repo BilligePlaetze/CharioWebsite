@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import {DataService} from '../../data.service';
 
 @Component({
   selector: 'app-world',
@@ -7,7 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./world.component.css']
 })
 export class WorldComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dataService: DataService) { }
   niger_lng = 11.5579;
   niger_lat = 18.0999;
   zkm_lng = 8.3812;
@@ -20,6 +21,11 @@ export class WorldComponent {
   rnd3_lat = 38.8976763;
 
   clickedMarker(label: string, index: number) {
-    this.router.navigateByUrl('/charity?location=' + label);
+    this.dataService.getTransaction('CC180I').subscribe(
+      penis => console.log(penis['_embedded']['transactions']),
+      err => {
+        console.log(err);
+      });
+    // this.router.navigateByUrl('/charity?location=' + label);
   }
 }

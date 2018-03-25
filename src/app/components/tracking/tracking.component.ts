@@ -18,8 +18,5 @@ export class TrackingComponent {
   goat_buyer_lng = 2.1254;
   goat_buyer_lat = 13.5116;
 
-  clickedMarker(label: string, index: number) {
-    this.router.navigateByUrl('/charity?location=' + label);
-  }
-
+  
 }
