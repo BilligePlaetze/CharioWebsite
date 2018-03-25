@@ -21,11 +21,6 @@ export class WorldComponent {
   rnd3_lat = 38.8976763;
 
   clickedMarker(label: string, index: number) {
-    this.dataService.getTransaction('CC180I').subscribe(
-      penis => console.log(penis['_embedded']['transactions']),
-      err => {
-        console.log(err);
-      });
-    // this.router.navigateByUrl('/charity?location=' + label);
+    this.router.navigateByUrl('/charity?location=' + label);
   }
 }
