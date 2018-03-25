@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     BrowserModule,
     MaterializeModule,
     AgmCoreModule.forRoot({
-      apiKey: '...'
+      apiKey: 'AIzaSyC5sO9SQiJJe8wEAI41Q35vPmlrKtlCxfU'
     })
   ],
   providers: [],
